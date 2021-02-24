@@ -14,6 +14,8 @@ import { ProfilePicComponent } from './profile-pic/profile-pic.component';
 import { CommentsComponent } from './comments/comments.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import { AboutComponent } from './about/about.component';
     ProfilePicComponent,
     CommentsComponent,
     ProfileComponent,
-    AboutComponent
+    AboutComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
