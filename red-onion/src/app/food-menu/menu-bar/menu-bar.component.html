@@ -1,0 +1,19 @@
+<div>
+    <div class="container text-center mt-5">
+        <nav>
+            <button [ngClass]="{'mr-3 menu-btn': category === 'BREAKFAST'}" class="btn btn-ctg"
+                (click)="selectItem('BREAKFAST')">Breakfast</button>
+            <button [ngClass]="{'mr-3 menu-btn': category === 'LUNCH'}" class="btn btn-ctg"
+                (click)="selectItem('LUNCH')">Lunch</button>
+            <button [ngClass]="{'mr-3 menu-btn': category === 'DINNER'}" class="btn btn-ctg"
+                (click)="selectItem('DINNER')">Dinner</button>
+        </nav>
+        <div class="mt-4">
+            <app-food-item [selectedFoodItem]="selectedFoodItem"></app-food-item>
+        </div>
+        <div class="">
+            <button class="btn btn-danger mt-4">Checkout Your Food</button>
+            <button class="btn btn-secondary mt-4" disabled>Checkout Your Food</button>
+        </div>
+    </div>
+</div>
