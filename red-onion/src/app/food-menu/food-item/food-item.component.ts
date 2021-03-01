@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-food-item',
   templateUrl: './food-item.component.html',
@@ -7,13 +8,13 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 
 export class FoodItemComponent implements OnInit {
-  @Input() selectedFoodItem
+  @Input() selectedFoodItem;
   constructor() { }
 
   ngOnInit(): void {
 
   }
-  ngOnChanges() {
-    console.log(this.selectedFoodItem);
+  foodItemDetails(foodDetails) {
+    console.log(foodDetails);
   }
 }

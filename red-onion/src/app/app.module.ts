@@ -8,19 +8,25 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FoodMenuModule } from './food-menu/food-menu.module';
 import { ChooseSectionComponent } from './choose-section/choose-section.component';
 import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
     AppComponent,
     ChooseSectionComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     HeaderModule,
-    FoodMenuModule
+    FoodMenuModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
