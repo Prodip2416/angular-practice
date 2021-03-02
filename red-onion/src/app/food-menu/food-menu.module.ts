@@ -13,6 +13,8 @@ import { RouterModule } from '@angular/router';
   ],
   exports:[
     MenuBarComponent,
+    FoodItemComponent,
+    FoodDetailsComponent
   ]
 })
 export class FoodMenuModule { }

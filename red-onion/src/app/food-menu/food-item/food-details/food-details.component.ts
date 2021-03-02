@@ -1,5 +1,7 @@
+import { stringify } from '@angular/compiler/src/util';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { fakeData } from '../../../../fakeData/fakeData.js';
 
 
@@ -10,9 +12,28 @@ import { fakeData } from '../../../../fakeData/fakeData.js';
 })
 export class FoodDetailsComponent implements OnInit {
   foodItem: any;
-  constructor(private activateRouter: ActivatedRoute) { }
+  cartItem = 0;
+  totalItem = {}
+
+  constructor(private activateRouter: ActivatedRoute, private toastr: ToastrService) { }
 
   ngOnInit(): void {
     this.foodItem = fakeData.filter(item => item.id == this.activateRouter.snapshot.params['id'])
+  }
+  Increment() {
+    this.cartItem = this.cartItem + 1;
+  }
+  Decrement() {
+    if (this.cartItem > 0) {
+      this.cartItem = this.cartItem - 1;
+    } else {
+      this.toastr.error('Item can not less than zero');
+    }
+  }
+
+  AddToCart() {
+    this.totalItem = this.foodItem[0];
+    this.totalItem["value"] = this.cartItem;
+    localStorage.setItem('cart', JSON.stringify(this.totalItem));
   }
 }

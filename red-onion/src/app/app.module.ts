@@ -11,6 +11,9 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { RouterModule } from '@angular/router';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +29,11 @@ import { RouterModule } from '@angular/router';
     NgbModule,
     HeaderModule,
     FoodMenuModule,
-    RouterModule
+    RouterModule,
+    ToastrModule.forRoot({
+      positionClass: 'toast-bottom-right'
+    }),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
