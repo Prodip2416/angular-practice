@@ -1,4 +1,3 @@
-import { stringify } from '@angular/compiler/src/util';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
@@ -13,7 +12,7 @@ import { fakeData } from '../../../../fakeData/fakeData.js';
 export class FoodDetailsComponent implements OnInit {
   foodItem: any;
   cartItem = 0;
-  totalItem = {}
+  totalItem = {};
 
   constructor(private activateRouter: ActivatedRoute, private toastr: ToastrService) { }
 
@@ -32,8 +31,6 @@ export class FoodDetailsComponent implements OnInit {
   }
 
   AddToCart() {
-    this.totalItem = this.foodItem[0];
-    this.totalItem["value"] = this.cartItem;
-    localStorage.setItem('cart', JSON.stringify(this.totalItem));
+    console.log('help');
   }
 }

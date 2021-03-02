@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./choose-section.component.css']
 })
 export class ChooseSectionComponent implements OnInit {
-
+ 
   constructor() { }
 
   ngOnInit(): void {
