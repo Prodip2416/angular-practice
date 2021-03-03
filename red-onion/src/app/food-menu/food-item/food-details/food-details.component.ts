@@ -1,3 +1,4 @@
+import { stringify } from '@angular/compiler/src/util';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
@@ -30,7 +31,7 @@ export class FoodDetailsComponent implements OnInit {
     }
   }
 
-  AddToCart() {
-    console.log('help');
+  AddToCart(data) {
+   
   }
 }

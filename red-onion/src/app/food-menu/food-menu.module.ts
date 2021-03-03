@@ -5,6 +5,7 @@ import { FoodItemComponent } from './food-item/food-item.component';
 import { FoodDetailsComponent } from './food-item/food-details/food-details.component';
 import { RouterModule } from '@angular/router';
 
+
 @NgModule({
   declarations: [MenuBarComponent, FoodItemComponent, FoodDetailsComponent],
   imports: [
@@ -14,7 +15,7 @@ import { RouterModule } from '@angular/router';
   exports: [
     MenuBarComponent,
     FoodItemComponent,
-    FoodDetailsComponent
+    FoodDetailsComponent  
   ]
 })
 export class FoodMenuModule { }

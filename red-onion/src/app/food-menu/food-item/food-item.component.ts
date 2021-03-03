@@ -14,7 +14,9 @@ export class FoodItemComponent implements OnInit {
   ngOnInit(): void {
 
   }
-  foodItemDetails(foodDetails) {
-    console.log(foodDetails);
+
+  AddToCart(data) {
+    console.log(data);
   }
+
 }
